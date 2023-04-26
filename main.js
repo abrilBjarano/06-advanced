@@ -3,7 +3,7 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { environmentsComponent } from './src/concepts/01-environments';
 import { callbacksComponent } from './src/concepts/02-callbacks';
-import { promiseComponent } from './src/concepts/03-promises';
+import { findHero, promiseComponent } from './src/concepts/03-promises';
 
 document.querySelector('#app').innerHTML = `
   <div>
