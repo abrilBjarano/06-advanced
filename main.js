@@ -36,4 +36,4 @@ const element = document.querySelector('.card');
 // asyncAwaitComponent( element );
 // asyncAwaint2Component( element );
 // forAwaitComponent( element );
-generatorFunctionComponent( element );
+// generatorFunctionComponent( element );
