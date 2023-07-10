@@ -5,14 +5,31 @@
  */
 export const generatorFunctionComponent = ( element ) => {
 
-    const myGenerator = myFirstGeneratorFunction();
+    // const myGenerator = myFirstGeneratorFunction();
+    // console.log( myGenerator.next().value );
+    
+    const genId = idGenerator();
 
-    console.log( myGenerator.next() );
-    console.log( myGenerator.next() );
-    console.log( myGenerator.next() );
-    console.log( myGenerator.next() );
-    console.log( myGenerator.next() );
-    console.log( myGenerator.next() );
+    const button = document.createElement('button');
+    button.innerText = 'Click me :p';
+    element.append( button );
+
+    const renderButton = () => {
+        const { value } = genId.next();
+        button.innerHTML = `Click ${ value }`;
+    }
+
+    button.addEventListener('click', (event) => renderButton() );
+
+}
+
+
+function* idGenerator(){
+
+    let currentId = 0;
+    while(true){
+        yield ++ currentId; 
+    }
 
 }
 
